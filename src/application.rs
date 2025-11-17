@@ -720,7 +720,7 @@ pub struct Application {
     /// Reference: [Merge manifest files - tools:replace](https://developer.android.com/studio/build/manage-manifests#merge-manifests)
     #[yaserde(attribute, prefix = "tools")]
     pub replace: Option<String>,
-    /// Specifies which attributes or child elements from lower priority manifest files 
+    /// Specifies which attributes or child elements from lower priority manifest files
     /// should be removed entirely.
     ///
     /// Reference: [Merge manifest files - tools:remove](https://developer.android.com/studio/build/manage-manifests#merge-manifests)
