@@ -242,7 +242,7 @@ pub struct AndroidManifest {
     #[yaserde(attribute, prefix = "tools")]
     pub ignore: Option<String>,
     /// This attribute works the same as the @TargetApi annotation in Java code. It lets 
-    /// you specify the API level (either as an integer or as a code name) that supports 
+    /// you specify the API level (either as an integer or as a code name) that supports
     /// this element.
     ///
     /// For example: `tools:targetApi="14"`
