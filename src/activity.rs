@@ -838,7 +838,7 @@ pub struct Activity {
     /// Reference: [Merge manifest files - tools:remove](https://developer.android.com/studio/build/manage-manifests#merge-manifests)
     #[yaserde(attribute, prefix = "tools")]
     pub remove: Option<String>,
-    /// Specifies the merge strategy for this element. Can be "merge", "replace", 
+    /// Specifies the merge strategy for this element. Can be "merge", "replace",
     /// "removeAll", "merge-only", or "strict".
     ///
     /// For example: `tools:node="replace"`
