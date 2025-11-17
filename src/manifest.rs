@@ -306,7 +306,7 @@ pub struct AndroidManifest {
     #[yaserde(rename = "uses-permission-sdk-23")]
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub uses_permission_sdk_23: Vec<UsesPermissionSdk23>,
-    /// This attribute lets you specify whether the build tools should use safe mode 
+    /// This attribute lets you specify whether the build tools should use safe mode
     /// (keep all resources that are explicitly cited and that might be referenced
     /// dynamically) or strict mode (keep only the resources that are explicitly cited 
     /// in code or in other resources).
