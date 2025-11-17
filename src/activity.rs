@@ -79,7 +79,9 @@ use serde::{Deserialize, Serialize};
 ///           tools:remove="string"
 ///           tools:node=["merge" | "replace" | "removeAll" | "merge-only" | "strict"]
 ///           tools:ignore="string"
-///           tools:targetApi="string" >
+///           tools:targetApi="string"
+///           tools:selector="string"
+///           tools:strict="string" >
 ///     ...
 /// </activity>
 /// ```
