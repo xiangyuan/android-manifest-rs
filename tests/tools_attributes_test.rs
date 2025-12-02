@@ -10,7 +10,7 @@ fn test_parse_manifest_with_tools_attributes() {
         .expect("Failed to parse manifest");
     
     // Test manifest level tools attributes
-    assert_eq!(manifest.package, "com.example.testapp");
+    assert_eq!(manifest.package, Some("com.example.testapp".to_string()));
     assert_eq!(manifest.ignore, Some("MissingVersion".to_string()));
     assert_eq!(manifest.locale, Some("en".to_string()));
     

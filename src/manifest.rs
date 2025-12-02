@@ -134,7 +134,8 @@ pub struct AndroidManifest {
     /// [`Google Play`]: https://developer.android.com/distribute/google-play
     /// [`how to set the application ID`]: https://developer.android.com/studio/build/application-id
     #[yaserde(attribute)]
-    pub package: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub package: Option<String>,
     /// ## Caution
     /// `This constant was deprecated in API level 29.`
     /// Shared user IDs cause non-deterministic behavior within the package manager. As
