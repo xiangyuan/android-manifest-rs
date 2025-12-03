@@ -79,7 +79,9 @@ use serde::{Deserialize, Serialize};
 ///           tools:remove="string"
 ///           tools:node=["merge" | "replace" | "removeAll" | "merge-only" | "strict"]
 ///           tools:ignore="string"
-///           tools:targetApi="string" >
+///           tools:targetApi="string"
+///           tools:selector="string"
+///           tools:strict="string" >
 ///     ...
 /// </activity>
 /// ```
@@ -828,7 +830,7 @@ pub struct Activity {
     /// Reference: [Merge manifest files - tools:replace](https://developer.android.com/studio/build/manage-manifests#merge-manifests)
     #[yaserde(attribute, prefix = "tools")]
     pub replace: Option<String>,
-    /// Specifies which attributes or child elements from lower priority manifest files 
+    /// Specifies which attributes or child elements from lower priority manifest files
     /// should be removed entirely.
     ///
     /// For example: `tools:remove="android:configChanges"`
@@ -836,7 +838,7 @@ pub struct Activity {
     /// Reference: [Merge manifest files - tools:remove](https://developer.android.com/studio/build/manage-manifests#merge-manifests)
     #[yaserde(attribute, prefix = "tools")]
     pub remove: Option<String>,
-    /// Specifies the merge strategy for this element. Can be "merge", "replace", 
+    /// Specifies the merge strategy for this element. Can be "merge", "replace",
     /// "removeAll", "merge-only", or "strict".
     ///
     /// For example: `tools:node="replace"`
@@ -852,8 +854,8 @@ pub struct Activity {
     /// Reference: [Tools Attributes - tools:ignore](https://developer.android.com/studio/write/tool-attributes#tools-ignore)
     #[yaserde(attribute, prefix = "tools")]
     pub ignore: Option<String>,
-    /// This attribute works the same as the @TargetApi annotation in Java code. It lets 
-    /// you specify the API level (either as an integer or as a code name) that supports 
+    /// This attribute works the same as the @TargetApi annotation in Java code. It lets
+    /// you specify the API level (either as an integer or as a code name) that supports
     /// this element.
     ///
     /// For example: `tools:targetApi="14"`
